@@ -1,0 +1,70 @@
+@import './variables'
+    
+%container-style
+  max-width: 100%
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+%classic-flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+%main-btn
+  background-color: $light-btn-color
+  border: 2px solid $dark-brown-btn-color
+  border-radius: 3rem
+  box-shadow: $brown-btn-color 3px 3px 0 0
+  color: $brown-btn-color
+  cursor: pointer
+  display: inline-block
+  font-family: "Indie Flower", cursive
+  font-weight: 600
+  font-size: 1.3rem
+  padding: .5rem 2rem
+  line-height: 1.8rem
+  text-align: center
+  text-decoration: none
+  user-select: none
+  -webkit-user-select: none
+  touch-action: manipulation
+  &:hover
+    background-color: $white-color
+    &:active
+      box-shadow: $brown-btn-color 2px 2px 0 0
+      transform: translate(2px, 2px)
+  @media (max-width: 600px)    
+    padding: 0 2.5rem
+
+
+%questions-btn
+    flex:1    
+    width: 100%
+    // padding: 1rem
+    // font-size: 1.3rem
+    font-family: "Indie Flower", cursive
+    color: $light-text-color
+    background: $bg-btn-questions-color
+    border: none
+    border-radius: 1rem
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222
+    cursor: pointer
+
+    &:hover
+        box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444        
+        transition: 500ms
+        color: $btn-orange-color
+        text-shadow: 0px 0px 10px $btn-orange-color
+
+    &:focus
+        outline: none
+
+    // &:hover
+    //     color: $btn-orange-color
+    //     text-shadow: 0px 0px 10px $btn-orange-color
+    
+
+

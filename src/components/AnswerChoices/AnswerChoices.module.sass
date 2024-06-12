@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Indie+Flower&family=Satisfy&display=swap')
+@import '../../styles/variables'
+@import '../../styles/templates'
+
+
+.btns-container
+    position: absolute
+    bottom: 2%
+    width:  100%
+    display: flex
+    gap: 1rem
+    @media (max-width: 600px)
+        flex-wrap: wrap
+        position: relative
+
+.btns-container-for-twelve
+    display: flex
+    position: absolute
+    bottom: 2%
+    @media (max-width: 769px)
+        position: relative
+        flex-direction: row
+        flex-wrap: wrap
+
+.btn-box
+    @extend %classic-flex
+    flex-direction: column
+    gap: 2rem
+    width: 100%
+    padding: .3rem
+        
+    @media (max-width: 769px)
+        gap: 1.7rem
+        padding: .2rem
+        
+.btn-box-for-twelve
+    display: flex
+    flex-direction: column    
+    align-items: center
+    gap: 2rem
+    width: 100%
+    padding: .3rem
+    
+    @media (max-width: 769px)
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin: 1rem
+
+.btn
+    @extend %questions-btn
+    padding: 1rem
+    font-size: 1.3rem    
+    @media (max-width: 769px)
+        font-size: 1rem
+        padding: .8rem
+
+.door-img
+    max-width: 12rem
+    filter: $image-shadow
+   
+    @media (max-width: 769px)
+        max-width: 10rem
+
+     
+.img-for-twelve
+    max-width: 5rem
+
+.btn-for-twelve
+    @extend %questions-btn
+    min-height: 4.5rem
+    padding: .2rem 
+    font-size: .9rem

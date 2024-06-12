@@ -1,0 +1,89 @@
+@import '../../styles/variables'
+@import '../../styles/templates'
+@import '../../styles/_animations'
+  
+.modal-container
+  @extend %container-style
+  padding: 1.5rem
+ 
+.modal
+  position: relative
+  max-width: 75%  
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 2rem 1rem
+  background-color: rgba(187, 179, 179, 0.8)
+  text-shadow: $text-shadow
+  font-size: 1.3rem
+  border-radius: 1rem
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2)
+  animation: sway 15s ease-in-out infinite
+  
+  @media (max-width: 600px)
+    max-width: 90%
+    text-align: center
+  
+.pin
+  position: absolute
+  top: -1.6rem
+  font-size: 1.2rem
+  text-align: center
+
+  img
+    width: 7%
+    
+  @media (max-width: 600px)
+    top: -.5rem 
+
+.title
+  width: 30ch
+  margin-bottom: 1rem
+  color:$primary-brown-color
+  font-family: "IBM Plex Mono", monospace
+  white-space: nowrap
+  border-right: .3rem solid
+  overflow: hidden
+  animation: typing 5s steps(30), blink .5s step-end infinite alternate
+
+  @media (max-width: 789px)
+    font-size: 1.2rem
+  @media (max-width: 600px)
+    width: 100%
+    border-right: none 
+    white-space: normal
+    overflow: visible
+    animation: none
+
+.text
+  font-size: 1.3rem
+  margin-bottom: 1.5rem
+
+.gif
+  width: 35%
+  margin-bottom: 1rem
+  
+  @media (max-width: 600px)
+    width:70%
+
+.btn-lang
+  position: absolute
+  top: 2%    
+  right: 2%
+  background-color: transparent
+  border: none
+  font-family: "Indie Flower", cursive
+  font-weight: bold
+  font-size: 1.3rem
+  text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.5), -.1rem -.1rem .2rem rgba(255, 255, 255, 0.5)
+  color: $brown-btn-color
+  &:hover
+    color: $btn-lang-hover-color
+  &:active
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3)
+    padding: .2rem
+    border-radius: 1rem
+
+.btn-play
+  @extend %main-btn
+  

@@ -1,0 +1,34 @@
+@import '../../styles/variables'
+
+.scoreboard
+    position: absolute
+    right: 1%
+    display: flex
+    justify-content: end
+    align-items: center
+    gap: .3rem
+    padding: 0 .3rem
+    font-size: 2.5rem
+    font-weight: bold
+    text-shadow: $text-shadow
+    color: $light-text-color
+
+    @media (max-width: 600px)
+        position: relative
+        font-size: 1.8rem
+        
+
+.separator
+    color: $btn-orange-color
+    font-size: 2.5rem
+
+    @media (max-width: 600px)
+        font-size: 1.3rem
+
+.correct-answer
+    color: $green-color-count
+
+.answer-count
+    color:$primary-brown-color
+
+

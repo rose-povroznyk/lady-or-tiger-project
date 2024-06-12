@@ -1,0 +1,113 @@
+@import '../../styles/variables'
+@import '../../styles/templates'
+@import '../../styles/_animations'
+
+.container
+  @extend %container-style
+  position: relative 
+  flex-direction: column  
+  gap: 2rem
+  padding: 2rem
+  background: $bg-black-color
+  overflow: hidden
+
+.winner-certificate
+  position: relative
+  width: 60% 
+  padding: 5rem 1rem
+  text-align: center
+  font-size: 1.1rem
+  color: $dark-gray-letters-color
+  font-family: "IBM Plex Mono", monospace
+  text-shadow: $text-shadow
+  border-radius: 1rem
+  background: linear-gradient(135deg, #E1C699 0%, #C68F53 50%, #E1C699 100%)
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.1), 0 .6rem 2rem rgba(0, 0, 0, 0.1)
+  z-index: 1
+  overflow: hidden
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    width: 4rem
+    height: 4rem
+    background: $bg-black-color
+    border-radius: 50%
+    z-index: 1
+
+  &:before
+    top: -2.2rem
+    left: 50%
+    transform: translateX(-50%)
+
+  &:after
+    bottom: -2.2rem
+    left: 50%
+    transform: translateX(-50%)
+  
+  @media (max-width: 600px)
+    width: 95% 
+
+.certificate-box
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  gap:.8rem
+
+  @media (max-width: 600px)
+    flex-direction: column
+
+.winner-photo
+  width: 20%
+  border-radius: 50%
+  object-fit: cover
+  // box-shadow:0 .4rem .6rem rgba(0, 0, 0, 0.1),0 1rem 2rem rgba(0, 0, 0, 0.2),0 1.5rem 4rem rgba(0, 0, 0, 0.15)
+
+  @media (max-width: 600px)
+    width: 35%
+
+.skin-img
+  width: 17%
+  transform: rotate(25deg)
+  filter: $image-shadow
+
+.title
+  text-shadow: $text-shadow
+  color:$primary-brown-color
+  font-family: inherit
+  font-size: 1.8rem
+  margin-bottom: 1rem
+
+.score
+  margin-bottom: 1rem
+  span
+    color: $primary-brown-color
+
+.btn-play
+  @extend %main-btn
+
+.bubbles 
+  position: absolute
+  display: flex
+  width: 100%
+  z-index: 0
+  list-style: none
+  li 
+    position: relative
+    bottom: 3rem
+    width: 3rem
+    height: 3rem
+    background: $bubbles-color-green
+    box-shadow: 0 0 0 1rem #7edd9044, 0 0 5rem #7edd90, -10rem 0 #475c9a99, 10rem 0 #475c9a99
+    margin: 0 .4rem
+    border-radius: 50%
+    animation: bubbles-animation calc(190s / var(--i)) ease infinite
+    &:nth-child(2n)
+      background: $bubbles-color-blue
+      box-shadow: 0 0 0 1rem #475c9a44, 0 0 5rem #475c9a, -10rem 0 #7edd9099, 10rem 0 #7edd9099
+    &:nth-child(3n)
+      background: $bubbles-color-pink
+      box-shadow: 0 0 0 1rem #9a477244, 0 0 5rem #9a4772, -10rem 0 #7edd9099, 10rem 0 #7edd9099
+
+
+

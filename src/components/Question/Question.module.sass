@@ -1,0 +1,32 @@
+@import '../../styles/variables'
+@import '../../styles/templates'
+@import '../../styles/_animations'
+
+.lady, .tiger
+  position: fixed
+  width: 3rem
+  top: 35%
+  transform: translateX(-10rem)
+  animation-duration: 10s
+  animation-iteration-count: infinite
+  animation-direction: alternate
+
+.lady
+  left: 2%
+  animation-name: moveLeftToRight
+
+.tiger
+  right: 2%
+  animation-name: moveRightToLeft
+
+.lady.changePosition
+    left: auto
+    right: 0
+    transform: translateX(10rem)
+    animation: moveRightToLeft 5s infinite alternate
+
+.tiger.changePosition
+    right: auto
+    left: 0
+    transform: translateX(10rem)
+    animation: moveLeftToRight 20s infinite alternate

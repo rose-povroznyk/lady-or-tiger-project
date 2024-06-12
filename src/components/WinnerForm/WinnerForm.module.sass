@@ -1,0 +1,132 @@
+@import '../../styles/variables'
+@import '../../styles/templates'
+@import '../../styles/_animations'
+
+.form-container
+    position: relative
+    max-width: 100%
+    min-height: 100vh
+    padding: 3rem 0 0 0
+
+.winner-form
+  position: relative
+  margin: 0 auto
+  max-width: 45%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly 
+  padding: 1rem 2rem 3rem 2rem
+  background-color: rgba(187, 179, 179, 0.8)
+  text-shadow: $text-shadow
+  font-size: 1.3rem
+  border-radius: 1rem
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  animation: sway 15s ease-in-out infinite
+  
+  @media (max-width: 600px)
+    max-width: 90%
+    text-align: center
+
+.pin
+  position: absolute
+  top: -8%
+  margin-bottom: 1rem
+  font-size: 1.2rem
+  text-align: center
+
+  img
+    width: 10%
+  @media (max-width: 1200px)
+    top: -5%
+  @media (max-width: 770px)
+    top: -4%  
+
+.title
+  text-align: center
+  width: 17ch
+  margin-bottom: 1.5rem
+  color:$primary-brown-color
+  font-family: "IBM Plex Mono", monospace
+  white-space: nowrap
+  overflow: hidden
+  animation: typing 5s steps(30)
+  span
+    color: $title-span-color
+
+  @media (max-width: 769px)
+    font-size: 1.5rem
+
+  @media (max-width: 600px)
+    width: 100%
+    white-space: normal
+    border-right: none
+    white-space:normal
+    overflow: visible
+    animation: none
+
+.label
+  position: relative
+  width: 70%
+  display: flex
+  flex-direction: column
+  margin-top: 1rem
+  margin-bottom: 1rem
+  font-size: 1.2rem
+
+  span
+    position: absolute
+    top:0
+    left:0
+    background-color: $primary-brown-color
+    padding: 0.2rem
+    transform-origin: top left
+    transition: transform .3s ease, opacity .3s ease
+
+  input   
+    padding: 0.5rem
+    font-family: "IBM Plex Mono", monospace
+    font-weight: bold
+    text-indent: 3.5rem
+    border: none
+    // border-bottom: 2px solid transparent
+    outline:none
+    transition: border-bottom-color .3s ease
+    
+    &:focus
+      background-color: transparent
+      border-bottom: 2px solid $primary-brown-color
+      border-bottom-color: $primary-brown-color
+      outline: none
+
+    &:focus + span
+      position: absolute
+      top: -2px
+      left: 0
+      transform: translate(0%, 0%) rotate(90deg)
+      transform-origin: top left
+      opacity: 0.8
+
+    &::placeholder
+      font-family: "IBM Plex Mono", monospace
+
+.btn-play
+  @extend %main-btn
+
+.form-img-left,.form-img-right
+  width: 13%
+  position: absolute
+  bottom: 1%
+
+
+.form-img-left
+  right: 1%
+
+.form-img-right
+  left: 1%
+  transform: scaleX(-1)
+
+.error
+  color: $light-text-color
+  
+  
